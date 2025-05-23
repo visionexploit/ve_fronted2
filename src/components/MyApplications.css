@@ -1,0 +1,123 @@
+.my-applications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.applications-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.application-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+}
+
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.application-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.application-details {
+  margin: 1rem 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #666;
+  font-weight: 500;
+}
+
+.value {
+  color: #333;
+}
+
+.application-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.action-button.view {
+  background-color: #007bff;
+  color: white;
+}
+
+.action-button.view:hover {
+  background-color: #0056b3;
+}
+
+.action-button.update {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-button.update:hover {
+  background-color: #218838;
+} 

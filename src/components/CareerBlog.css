@@ -1,0 +1,203 @@
+.career-blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.career-blog-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.career-blog-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.blog-subtitle {
+  font-size: 1.2rem;
+  color: #5d6d7e;
+}
+
+.blog-section {
+  margin-bottom: 60px;
+}
+
+.blog-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.blog-section h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #3498db;
+  bottom: 0;
+  left: 0;
+}
+
+.benefits-grid,
+.sectors-grid,
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.benefit-card,
+.sector-card,
+.resource-card {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover,
+.sector-card:hover,
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h3,
+.sector-card h3,
+.resource-card h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.benefit-card p,
+.sector-card p,
+.resource-card p {
+  color: #5d6d7e;
+  line-height: 1.6;
+}
+
+.sector-card ul,
+.resource-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.sector-card li,
+.resource-card li {
+  color: #5d6d7e;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.sector-card li::before,
+.resource-card li::before {
+  content: '•';
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+.requirements-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.requirement-item {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.requirement-item h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.requirement-item p,
+.requirement-item ul {
+  color: #5d6d7e;
+  line-height: 1.6;
+}
+
+.requirement-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.requirement-item li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.requirement-item li::before {
+  content: '✓';
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+}
+
+.salary-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.salary-range {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.salary-range h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.salary-range p {
+  color: #3498db;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.salary-note {
+  text-align: center;
+  color: #5d6d7e;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .career-blog-header h1 {
+    font-size: 2rem;
+  }
+
+  .blog-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .benefits-grid,
+  .sectors-grid,
+  .resources-grid,
+  .requirements-list,
+  .salary-info {
+    grid-template-columns: 1fr;
+  }
+} 

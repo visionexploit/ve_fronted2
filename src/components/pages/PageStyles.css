@@ -1,0 +1,46 @@
+/* Override background colors for all pages */
+.services,
+.programs,
+.universities,
+.sign-up,
+.sign-in {
+  background-color: #fff !important;
+}
+
+body {
+  background-color: #fff !important;
+}
+
+.services-container,
+.programs-page,
+.universities-container,
+.sign-up-container {
+  background-color: #fff !important;
+}
+
+/* Remove any gradient backgrounds */
+.services,
+.programs,
+.universities,
+.sign-up,
+.sign-in {
+  background-image: none !important;
+}
+
+/* Ensure content is visible on white background */
+.services h1,
+.programs h1,
+.universities h1,
+.sign-up h1,
+.sign-in h1 {
+  color: #333 !important;
+}
+
+/* Remove any background images */
+.services,
+.programs,
+.universities,
+.sign-up,
+.sign-in {
+  background-image: none !important;
+}

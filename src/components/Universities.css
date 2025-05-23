@@ -1,0 +1,388 @@
+/* Universities Page Styles */
+.universities-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Styles */
+  .universities-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .universities-header h1 {
+    font-size: 42px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .universities-header h1::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .universities-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    color: #5d6d7e;
+    line-height: 1.6;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .filter-btn {
+    background-color: #f5f9ff;
+    color: #2c3e50;
+    border: 2px solid #e1e8ed;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #e1e8ed;
+  }
+  
+  .filter-btn.active {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: white;
+  }
+  
+  /* Universities Grid */
+  .universities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+  
+  /* University Card Styles */
+  .university-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .university-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .university-image-container {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .university-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .university-card:hover .university-image {
+    transform: scale(1.1);
+  }
+  
+  .university-type-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .university-type-badge:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    z-index: -1;
+  }
+  
+  /* For public universities, use a different color */
+  .university-card:has(.university-type-badge:contains("public")) .university-type-badge {
+    background-color: #27ae60;
+  }
+  
+  /* Alternative approach for public universities badge color */
+  .university-type-badge:contains("public") {
+    background-color: #27ae60;
+  }
+  
+  .university-details {
+    padding: 25px;
+  }
+  
+  .university-name {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0 0 15px;
+    font-weight: 700;
+  }
+  
+  .university-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .university-location, .university-ranking {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #5d6d7e;
+  }
+  
+  .location-icon, .ranking-icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  .university-stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f9ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #5d6d7e;
+    margin-top: 5px;
+  }
+  
+  .explore-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .explore-btn:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .explore-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.4);
+  }
+  
+  /* Remove default link styling */
+  .explore-btn:link,
+  .explore-btn:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* CTA Section */
+  .universities-cta {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(41, 128, 185, 0.3);
+  }
+  
+  .universities-cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .universities-cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-btn {
+    background-color: white;
+    color: #3498db;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Badge Colors - Standard Approach */
+  .university-card .university-type-badge {
+    background-color: #e74c3c; /* Default - private */
+  }
+  
+  .university-card .university-type-badge:contains('public') {
+    background-color: #27ae60;
+  }
+  
+  /* Alternative approach for badge colors */
+  .university-type-badge[data-type="public"] {
+    background-color: #27ae60;
+  }
+  
+  .university-type-badge[data-type="private"] {
+    background-color: #e74c3c;
+  }
+  
+  /* Animation for page loading */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .universities-container {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .university-card {
+    animation: fadeIn 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .university-card:nth-child(1) { animation-delay: 0.1s; }
+  .university-card:nth-child(2) { animation-delay: 0.2s; }
+  .university-card:nth-child(3) { animation-delay: 0.3s; }
+  .university-card:nth-child(4) { animation-delay: 0.4s; }
+  .university-card:nth-child(5) { animation-delay: 0.5s; }
+  .university-card:nth-child(6) { animation-delay: 0.6s; }
+  .university-card:nth-child(7) { animation-delay: 0.7s; }
+  .university-card:nth-child(8) { animation-delay: 0.8s; }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .universities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .universities-header h1 {
+      font-size: 36px;
+    }
+    
+    .universities-intro {
+      font-size: 16px;
+    }
+    
+    .filter-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .filter-btn {
+      width: 80%;
+    }
+    
+    .universities-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .university-stats {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .universities-cta {
+      padding: 40px 20px;
+    }
+    
+    .universities-cta h2 {
+      font-size: 28px;
+    }
+    
+    .university-meta {
+      flex-direction: column;
+    }
+    
+    .university-stats {
+      padding: 10px;
+    }
+  }
+  
+  /* Fix for CSS contains selector which isn't widely supported */
+  .university-card[data-type="public"] .university-type-badge {
+    background-color: #27ae60;
+  }
+  
+  .university-card[data-type="private"] .university-type-badge {
+    background-color: #e74c3c;
+  }

@@ -1,0 +1,249 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo-container h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.logo-container p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0.5rem 0 0;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.search-icon {
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #333;
+}
+
+.filters-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 300px;
+}
+
+.filter-group p {
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.toggle-buttons button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.toggle-buttons button:hover {
+  background: #f5f5f5;
+}
+
+.toggle-buttons button.active {
+  background: #1a237e;
+  color: white;
+  border-color: #1a237e;
+}
+
+.faculties-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faculty-section {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faculty-header {
+  padding: 1rem;
+  background: #f8f9fa;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.faculty-header:hover {
+  background: #f0f1f2;
+}
+
+.faculty-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.arrow {
+  transition: transform 0.2s;
+  color: #666;
+}
+
+.arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.programs-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.program-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.program-card:hover {
+  transform: translateY(-2px);
+}
+
+.program-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.program-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+}
+
+.discount-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.discount-badge.ücretli {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.discount-badge.discount-25 {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.discount-badge.discount-50 {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.program-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+}
+
+.fee strong {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+
+  .logo-container h1 {
+    font-size: 2rem;
+  }
+
+  .filters-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .programs-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,186 @@
+/* BoluUniversityPrograms.css */
+
+.programs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #005a87;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+  
+  .header h2 {
+    margin: 10px 0 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #005a87;
+    box-shadow: 0 0 8px rgba(0, 90, 135, 0.2);
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-button {
+    padding: 10px 15px;
+    background-color: #f0f8ff;
+    border: 1px solid #c4ddee;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .filter-button:hover {
+    background-color: #e1f0ff;
+  }
+  
+  .faculty-filter {
+    margin-bottom: 25px;
+  }
+  
+  .faculty-filter h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #005a87;
+  }
+  
+  .faculty-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .faculty-button {
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  
+  .faculty-button:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .faculty-button.active {
+    background-color: #005a87;
+    color: white;
+    border-color: #005a87;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .programs-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 15px;
+  }
+  
+  .programs-table th {
+    background-color: #005a87;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .programs-table th:hover {
+    background-color: #004a70;
+  }
+  
+  .programs-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+  }
+  
+  .programs-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .programs-table tbody tr:hover {
+    background-color: #f0f8ff;
+  }
+  
+  .programs-table td {
+    padding: 12px 15px;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .header h2 {
+      font-size: 1.2rem;
+    }
+  
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .programs-table th,
+    .programs-table td {
+      padding: 10px 8px;
+      font-size: 14px;
+    }
+  
+    .faculty-buttons {
+      justify-content: center;
+    }
+  }
